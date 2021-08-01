@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          docker build buildenv -t chaseos-buildenv
+          docker build ChaseOS/buildenv -t chaseos-buildenv
           wsl --set-version kali-linux 2
           docker run --rm -it -v "${pwd}:/root/env" chaseos
 
