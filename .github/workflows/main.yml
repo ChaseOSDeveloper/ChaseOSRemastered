@@ -31,6 +31,6 @@ jobs:
       - name: Go into kali linux
         run: |
           cd ChaseOS
-          docker run --rm -i -v "${pwd}:/root/env" chaseos:latest
+          docker run --rm -v "${pwd}:/root/env" chaseos:latest
       - name: Build
         run: make build-x86_64
