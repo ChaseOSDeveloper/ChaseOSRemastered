@@ -29,6 +29,10 @@ jobs:
       - name: Install dependencies
         run: docker build ChaseOS/buildenv -t chaseos-buildenv
       - name: Go into kali linux
-        run: docker run --rm -i -v "${pwd}:/root/env" chaseos:latest
+        run: |
+          cd ..
+          cd ..
+          cd ChaseOS
+          docker run --rm -i -v "${pwd}:/root/env" chaseos:latest
       - name: Build
         run: make build-x86_64
