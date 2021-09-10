@@ -32,5 +32,4 @@ jobs:
         run: |
           cd ChaseOS
           docker run --rm -v "${pwd}:/root/env" chaseos:latest
-      - name: Build
-        run: make build-x86_64
+          make build-x86_64
